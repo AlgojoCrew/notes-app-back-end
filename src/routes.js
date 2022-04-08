@@ -1,31 +1,29 @@
-const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler } = require('./handler');
+const { deleteNoteByIdHandler } = require('./handler');
+const { editNoteByIdHandler } = require('./handler');
+const { getNoteByIdHandler } = require('./handler');
+const { addNoteHandler, getAllNotesHandler } = require('./handler');
 
 const routes = [
-  //Post nilai catatan baru
-    {
+  {
     method: 'POST',
     path: '/notes',
     handler: addNoteHandler,
   },
-  //Get nilai catatan baru
   {
     method: 'GET',
     path: '/notes',
     handler: getAllNotesHandler,
   },
-  //Get nilai catatan yang sudah ada
   {
     method: 'GET',
     path: '/notes/{id}',
     handler: getNoteByIdHandler,
   },
-  //Put nilai catatan yang sudah ada
   {
     method: 'PUT',
     path: '/notes/{id}',
     handler: editNoteByIdHandler,
   },
-  //Delete catatan yang sudah ada
   {
     method: 'DELETE',
     path: '/notes/{id}',
