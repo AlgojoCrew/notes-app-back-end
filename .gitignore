@@ -3,3 +3,5 @@ notes-api-webserver.pem
 key
 setting chrome.txt
 .eslintrc.json
+.prod.env
+.env
